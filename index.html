@@ -2782,6 +2782,8 @@ video {
                     <p class="warm-regards-name">मनोज सिंह</p>
                     <p class="warm-regards-name">राजेश सिंह</p>
                     <p class="warm-regards-name">देवेन्द्र प्रसाद सिंह</p>
+                    <p class="warm-regards-name">अंकित कुमार</p>
+                    <p class="warm-regards-name">यश प्रताप सिंह</p>
                 </div>
                 <div class="section-divider"></div>
             </div>
@@ -3006,23 +3008,36 @@ video {
         </audio>
 
         <script>
-            const bgMusic = document.getElementById('bg-music');
-            const inviteGate = document.getElementById('invite-gate');
-            const openInviteBtn = document.getElementById('open-invite');
+    const bgMusic = document.getElementById('bg-music');
+    const inviteGate = document.getElementById('invite-gate');
+    const openInviteBtn = document.getElementById('open-invite');
 
-            openInviteBtn.addEventListener('click', () => {
-                inviteGate.classList.add('opening');
-                bgMusic.play().catch(() => {});
+    const secondSong = "Aaj Sajeya.mp3";
 
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen().catch(() => {});
-                }
+    let secondSongLoaded = false;
 
-                setTimeout(() => {
-                    inviteGate.classList.add('hidden');
-                    document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
-                }, 700);
-            });
-        </script>
+    bgMusic.addEventListener('ended', () => {
+        if (!secondSongLoaded) {
+            secondSongLoaded = true;
+            bgMusic.src = secondSong;
+            bgMusic.loop = true;
+            bgMusic.play().catch(() => {});
+        }
+    });
+
+    openInviteBtn.addEventListener('click', () => {
+        inviteGate.classList.add('opening');
+        bgMusic.play().catch(() => {});
+
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen().catch(() => {});
+        }
+
+        setTimeout(() => {
+            inviteGate.classList.add('hidden');
+            document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+        }, 700);
+    });
+</script>
     </body>
 </html>
