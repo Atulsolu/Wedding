@@ -2140,14 +2140,14 @@ video {
                         <p class="family-name-big">अतुल कुमार</p>
                         <div class="family-sep"></div>
 
-                        <p class="family-section-label">पुत्र</p>
+                        <p class="family-section-label">सुपुत्र</p>
                         <p class="family-person-name">श्रीमती किरण देवी</p>
                         <p class="family-ampersand">&amp;</p>
                         <p class="family-person-name">श्री राजेश सिंह</p>
 
                         <div class="family-sep family-sep--sm"></div>
 
-                        <p class="family-section-label">पौत्र</p>
+                        <p class="family-section-label">सुपौत्र</p>
                         <p class="family-person-name">रामावती कुंवर</p>
                         <p class="family-ampersand">&amp;</p>
                         <p class="family-person-name">स्व. हरेंद्र सिंह</p>
@@ -2170,14 +2170,14 @@ video {
                         <p class="family-name-big">अभिलाषा कुमारी</p>
                         <div class="family-sep"></div>
 
-                        <p class="family-section-label">पुत्री</p>
+                        <p class="family-section-label">सुपुत्री</p>
                         <p class="family-person-name">कुमकुम देवी</p>
                         <p class="family-ampersand">&amp;</p>
                         <p class="family-person-name">श्री राजीव कुमार पांडेय</p>
 
                         <div class="family-sep family-sep--sm"></div>
 
-                        <p class="family-section-label">नातिन</p>
+                        <p class="family-section-label">सुपौत्री</p>
                         <p class="family-person-name">स्व. कृष्णा पांडेय</p>
                         <p class="family-ampersand">&amp;</p>
                         <p class="family-person-name">स्व. श्री रामासन पांडेय</p>
@@ -2778,10 +2778,15 @@ video {
             <div class="section-inner">
                 <p class="section-label"><strong>सादर शुभकामनाओं सहित</strong></p>
                 <div class="warm-regards-names">
+                    <p class="warm-regards-name">विनोद सिंह</p>
                     <p class="warm-regards-name">मृगेन्द्र सिंह</p>
                     <p class="warm-regards-name">मनोज सिंह</p>
                     <p class="warm-regards-name">राजेश सिंह</p>
                     <p class="warm-regards-name">देवेन्द्र प्रसाद सिंह</p>
+                    <p class="warm-regards-name">राघवेंद्र प्रसाद सिंह</p>
+                    <p class="warm-regards-name">रोहित रंजन</p>
+                    <p class="warm-regards-name">राजीव रंजन</p>
+                    <p class="warm-regards-name">शिवम</p>
                     <p class="warm-regards-name">अंकित कुमार</p>
                     <p class="warm-regards-name">यश प्रताप सिंह</p>
                 </div>
@@ -3022,6 +3027,9 @@ video {
             bgMusic.src = secondSong;
             bgMusic.loop = true;
             bgMusic.play().catch(() => {});
+            setTimeout(() => {
+            bgMusic.pause();
+        }, 60000);
         }
     });
 
